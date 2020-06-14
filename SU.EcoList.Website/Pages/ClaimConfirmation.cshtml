@@ -1,0 +1,143 @@
+﻿@page
+@model SU.EcoList.Website.ClaimConfirmationModel
+@{
+    ViewData["Title"] = "ClaimConfirmation";
+}
+
+
+@*Layout*@
+<div class="format1">
+
+    @*leftSide of page*@
+    <div class="format2">
+
+        <img src="~/img/Eagle.PNG" />
+
+        <div class="boxed">
+
+            <small> don't need something!</small>
+
+        </div>
+
+        <br>
+        @*NewPost button*@
+        <button class="addMoreOrange" onclick="window.location.href = '/NewPost';">List An Item</button>
+
+        <br>
+        <br>
+
+        <div class="boxed">
+
+            <small> what do you need!</small>
+
+        </div>
+        @*searchBox button*@
+        <div class="searchBox">
+
+            <form action="/SearchResult">
+
+                <input class="searchInput" type="search" name="q" placeholder="Search">
+
+            </form>
+
+        </div>
+
+        <br>
+        @*select catagory button*@
+        <select id="select a category">
+
+            <option value="select a category">Select a category</option>
+            <option value="Electronic">Electronic</option>
+            <option value="furniture">furniture</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Lighting">lighting</option>
+
+        </select>
+
+        <br>
+        <br>
+        @*My account button*@
+        <input class="addMore" type="button" value="My Account">
+
+        <br>
+        <br>
+        @*My wishList button*@
+        <input class="addMore" type="button" value="My WishList">
+
+        <br>
+        <br>
+        @*My Listing bttuon*@
+        <input class="addMore" type="button" value="My Listing">
+
+        <br>
+        <br>
+        @*My Claim items button*@
+        <input class="addMore" type="button" value="My Claimed items">
+
+    </div>
+
+</div>
+
+@*Center side of the Page*@
+    <div class="boxed">
+        @*Claim confirmation button*@
+        <h1><strong>Claim Confirmation</strong></h1>
+
+        <br>
+        <br>
+        <br>
+
+    </div>
+
+    @*E-mail confirmation*@ 
+    <div class="card-columns">
+
+        <img src="~/img/PaperWeight1.png" />
+
+        <div class="text-block">
+
+            <h4>
+
+                <b>THANK YOU!</b>
+                @*green tick sign*@
+                <span style="font-family: Lucida Grande; color:forestgreen">
+
+                    <b>&#x2714</b>
+
+                </span>
+
+            </h4>
+
+            <p>
+
+                <h6>
+
+                    Confirmation Detail:  Modern Art Paperweight - St206
+
+                    <br>
+                    <br>
+
+                    Location:  Engineering building/level 3/Room 303
+
+                    <br>
+                    <br>
+
+                    Due Dat:  08/21/2020
+
+                    <br>
+                    <br>
+
+                    pick-up hours:  8am-5pm/Mon-Fri
+
+                    <br>
+
+                </h6>
+
+            </p>
+            @*Generating E-mail page along with lister e-mail*@
+            <button class="addMore" onclick="window.location.href = 'mailto:sborhan@seattleu.edu';">E-mail lister</button>
+
+        </div>
+
+    </div>
+

@@ -1,0 +1,170 @@
+[
+  {
+    "Id": "10",
+    "Image": null,
+    "Url": "User/SeanMcMurphy.png",
+    "Name": "Sean McMurphy",
+    "Dept": "NURS",
+    "JoinDate": "6/30/2020",
+    "Listings": "3",
+    "Suspension": "Never",
+    "ActiveListings": "2",
+    "Claims": "4",
+    "ClaimsRelisted": "0"
+  },
+
+  {
+    "Id": "11",
+    "Image": null,
+    "Url": "User/SarahConner.png",
+    "Name": "Sarah Conner",
+    "Dept": "CHEM",
+    "JoinDate": "6/5/2020",
+    "Listings": "1",
+    "Suspension": "Never",
+    "ActiveListings": "1",
+    "Claims": "2",
+    "ClaimsRelisted": "0"
+  },
+
+
+  {
+    "Id": "12",
+    "Image": null,
+    "Url": "User/RonaldFleck.png",
+    "Name": "Ronald Fleck",
+    "Dept": "CSSE",
+    "JoinDate": "6/3/2020",
+    "Listings": "3",
+    "Suspension": "Never",
+    "ActiveListings": "1",
+    "Claims": "1",
+    "ClaimsRelisted": "0"
+  },
+
+  {
+    "Id": "13",
+    "Image": null,
+    "Url": "User/PranavNadella.png",
+    "Name": "Pranav Nadella",
+    "Dept": "ENGL",
+    "JoinDate": "6/6/2020",
+    "Listings": "2",
+    "Suspension": "Never",
+    "ActiveListings": "2",
+    "Claims": "0",
+    "ClaimsRelisted": "0"
+  },
+
+  {
+    "Id": "14",
+    "Image": null,
+    "Url": "User/MichelleSilverman.png",
+    "Name": "Michelle Silverman",
+    "Dept": "CRJS",
+    "JoinDate": "6/3/2020",
+    "Listings": "1",
+    "Suspension": "Once",
+    "ActiveListings": "1",
+    "Claims": "2",
+    "ClaimsRelisted": "0"
+  },
+
+  {
+    "Id": "15",
+    "Image": null,
+    "Url": "User/MarcusRivera.png",
+    "Name": "Marcus Rivera",
+    "Dept": "ECON",
+    "JoinDate": "6/7/2020",
+    "Listings": "2",
+    "Suspension": "Never",
+    "ActiveListings": "2",
+    "Claims": "1",
+    "ClaimsRelisted": "0"
+  },
+
+  {
+    "Id": "16",
+    "Image": null,
+    "Url": "User/KarenWright.png",
+    "Name": "Karen Wright",
+    "Dept": "NURS",
+    "JoinDate": "6/6/2020",
+    "Listings": "7",
+    "Suspension": "Never",
+    "ActiveListings": "4",
+    "Claims": "9",
+    "ClaimsRelisted": "0"
+  },
+
+  {
+    "Id": "17",
+    "Image": null,
+    "Url": "User/JohnAsher.png",
+    "Name": "John Asher",
+    "Dept": "MATH",
+    "JoinDate": "6/3/2020",
+    "Listings": "2",
+    "Suspension": "Never",
+    "ActiveListings": "2",
+    "Claims": "1",
+    "ClaimsRelisted": "1"
+  },
+
+  {
+    "Id": "18",
+    "Image": null,
+    "Url": "User/GinaFloyd.png",
+    "Name": "Gina Floyd",
+    "Dept": "DCNC",
+    "JoinDate": "6/10/2020",
+    "Listings": "1",
+    "Suspension": "Never",
+    "ActiveListings": "0",
+    "Claims": "2",
+    "ClaimsRelisted": "0"
+  },
+
+  {
+    "Id": "19",
+    "Image": null,
+    "Url": "User/ErinFineman.png",
+    "Name": "Erin Fineman",
+    "Dept": "EDUC",
+    "JoinDate": "6/5/2020",
+    "Listings": "3",
+    "Suspension": "Never",
+    "ActiveListings": "3",
+    "Claims": "1",
+    "ClaimsRelisted": "0"
+  },
+
+  {
+    "Id": "20",
+    "Image": null,
+    "Url": "User/BobSalizar.png",
+    "Name": "Bob Salizar",
+    "Dept": "MATH",
+    "JoinDate": "6/7/2020",
+    "Listings": "3",
+    "Suspension": "Never",
+    "ActiveListings": "2",
+    "Claims": "2",
+    "ClaimsRelisted": "0"
+  },
+
+  {
+    "Id": "21",
+    "Image": null,
+    "Url": "User/ArianaHopkins.png",
+    "Name": "Ariana Hopkins",
+    "Dept": "NURS",
+    "JoinDate": "6/3/2020",
+    "Listings": "10",
+    "Suspension": "Never",
+    "ActiveListings": "7",
+    "Claims": "6",
+    "ClaimsRelisted": "0"
+  }
+]

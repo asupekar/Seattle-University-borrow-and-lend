@@ -1,0 +1,138 @@
+﻿@page
+@model IndexModel
+@{
+
+    ViewData["Title"] = "SearchResult";
+
+}
+
+
+@*Layout*@
+<div class="format1">
+
+    @*leftSide of page*@
+    <div class="format2">
+
+        <img src="~/img/Eagle.PNG" />
+
+        <div class="boxed">
+
+            <small> don't need something!</small>
+
+        </div>
+
+        <br>
+
+        @*List An Item button*@
+        <button class="addMoreOrange" onclick="window.location.href = '/NewPost';">List An Item</button>
+
+        <br>
+        <br>
+
+        <div class="boxed">
+
+            <small> what do you need!</small>
+
+        </div>
+
+        @*search bar*@
+        <div class="searchBox">
+
+            <form action="/SearchResult">
+
+                <input class="searchInput" type="search" name="q" placeholder="Search">
+
+            </form>
+
+        </div>
+
+        <br>
+
+        @*select catagory button*@
+        <select id="select a category">
+
+            <option value="select a category">Select a category</option>
+            <option value="Electronic">Electronic</option>
+            <option value="furniture">furniture</option>
+            <option value="Accessories">Accessories</option>
+            <option value="lighting">lighting</option>
+
+        </select>
+
+        <br>
+        <br>
+
+        @*My Account button*@
+        <input class="addMore" type="button" value="My Account">
+
+        <br>
+        <br>
+
+        @*My WishList button*@
+        <input class="addMore" type="button" value="My WishList">
+
+        <br>
+        <br>
+
+        @*My Lisiting button*@
+        <input class="addMore" type="button" value="My Listing" onclick="window.location.href = '/MyListings';">
+
+        <br>
+        <br>
+
+        @*My Claimed items button*@
+        <input class="addMore" type="button" value="My Claimed items">
+
+    </div>
+
+
+    @*Center side of the Page*@ 
+        <div class="boxed">
+
+            @*Page title*@
+            <h1><strong>Search Result</strong></h1>
+
+            <br>
+            <br>
+            @*Number of related item found on the Ecolist*@
+            <h4>16 items found...</h4>
+
+        </div>
+
+    @*dislay all related searched item by user*@
+        <div class="card-columns">
+
+            @*checking all images in the products.json objects*@
+            @foreach (var product in Model.Products)
+            {
+                //Only select items with id= "PaperWeight"  in the products.json objects
+                @if (product.Id.Equals("PaperWeight"))
+                {
+
+                    <a href="/ItemOverView">
+
+                        <div class="card">
+                            @*display images*@
+                            <div class="card-img" style="background-image: url('@product.Image');"></div>
+
+                            <div class="card-body">
+
+                                @*adding title under each image*@
+                                <a class="card-title" style="background-color:white;color:green" asp-area="" asp-page="/ItemOverView"><small>@product.Title</small></a>
+
+                                @*adding wishlist star sign for each item image*@
+                                <input type="button" class="button-star" style="float: right;color:black;height:30px;width:30px">
+
+                            </div>
+
+                        </div>
+
+                    </a>
+                
+                  }
+              }
+
+        </div>
+
+</div>
+

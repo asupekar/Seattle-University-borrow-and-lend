@@ -1,0 +1,110 @@
+﻿@page
+@model SU.EcoList.Website.Pages.PostConfirmationModel
+@{
+    ViewData["Title"] = "PostConfirmation";
+}
+
+
+@*leftSide of page*@
+
+    <div class="format1">
+
+        <div class="format2">
+
+            <img src="~/img/Eagle.PNG" />
+
+            <div class="boxed">
+                <small> don't need something!</small>
+            </div>
+
+            <br>
+
+            <div class="boxed">
+                <small> what do you need!</small>
+            </div>
+
+            <div class="searchBox">
+
+                <form action="/SearchResult">
+
+                    <input class="searchInput" type="search" name="q" placeholder="Search">
+
+                </form>
+
+            </div>
+
+            <br>
+
+            <input type="button" class="sharedElement" value="select a category">
+
+            <br>
+            <br>
+
+            <input type="button"  class="addMore" value="My Account">
+
+            <br>
+            <br>
+
+            <input type="button"  class="addMore" value="My WishList">
+
+            <br>
+            <br>
+
+            <input type="button"  class="addMore" value="My Listing"  onclick="window.location.href = '/MyListings';">
+
+            <br>
+            <br>
+
+            <input type="button"  class="addMore" value="My Claimed item">
+
+        </div>
+
+     </div>
+
+
+        @*Center side of the Page*@
+
+    <div class="centerPagePostConfirmation">
+
+        <div class="boxed">
+
+            <h1><strong>Post Confirmation</strong></h1>
+
+        </div>
+        <br />
+        <br />
+
+        <div class="card-columns">
+
+            <img src=@PostConfirmationModel.FilePath class="postConfirmation"
+                 alt="New image uplaod"
+                 title="New Upload" />
+
+            <div class="Thankyou">
+
+                <h3>
+                    THANK YOU!
+                    <br>
+
+                    <span class="signOnPostPage">
+                        &#10004;
+                    </span>
+
+                </h3>
+
+                <p>
+                    @PostConfirmationModel.TitleName has been posted on SU Ecolist.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="PostPage">
+
+        <button class="addMore" onclick="window.location.href = '/index';">Go to Home</button>
+
+    </div>
+        

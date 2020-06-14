@@ -1,0 +1,557 @@
+﻿.checked {
+    color: orange;
+}
+
+.fa-star {
+    cursor: pointer;
+}
+
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+.card-columns .card:hover .card-img {
+    opacity: 1;
+    -webkit-transform-style: preserve-3d;
+}
+
+.card-columns .card-body {
+    height: 100px;
+    font-family: 'Nunito', sans-serif;
+    background: #fbfafd;
+}
+
+.card-columns .card-img {
+    height: 330px;
+    vertical-align: bottom;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    opacity: .8;
+}
+
+.modal .card-img {
+    height: 500px;
+    vertical-align: bottom;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.card-columns .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(37,33,82,.12), 0 4px 8px rgba(37,33,82,.06);
+}
+
+.card-footer {
+    background: #fbfafd;
+}
+
+
+a.navbar-brand {
+    white-space: normal;
+    font-family: 'Antic Slab';
+    font-size: xx-large;
+    text-align: center;
+    word-break: break-all;
+}
+
+a.navbar-brand-lite {
+    white-space: normal;
+    font-family: 'Antic Slab';
+    font-size: xx-large;
+    text-align: center;
+    word-break: break-all;
+    color: white;
+}
+
+a.navbar-brand-orange {
+    margin-left: 5px;
+    white-space: normal;
+    font-family: 'Antic Slab';
+    font-size: xx-large;
+    text-align: center;
+    word-break: break-all;
+    color: darkorange
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #252152;
+    border-color: #252152;
+}
+
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #e9a8a6;
+        border-color: #e9a8a6;
+    }
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.button-star {
+    background-image: url('../img/star.png');
+    background-size: 100%;
+}
+
+    .button-star:focus {
+        background-image: url('../img/fill-star.png');
+        border: 1.5px solid white;
+        color: white;
+        background-color: khaki;
+    }
+
+    .button-star:hover {
+        background-image: url('../img/fill-star.png');
+        background-size: 100%;
+    }
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+}
+
+.menu-lable {
+    font-family: 'Nunito', sans-serif;
+    font-size: medium;
+    color: white;
+}
+
+.menu-lable-small {
+    font-family: 'Nunito', sans-serif;
+    font-size: small;
+    color: white;
+}
+
+.boxed-5px {
+    float: left;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+ul {
+    font-family: 'Nunito', sans-serif;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+    font-family: 'Nunito', sans-serif;
+}
+/*Backgrounds*/
+.bg-navbar {
+    background: -webkit-linear-gradient(110deg, #e9a8a6 60%, #252152 60%);
+    background: -o-linear-gradient(110deg, #e9a8a6 60%, #252152 60%);
+    background: -moz-linear-gradient(110deg, #e9a8a6 60%, #252152 60%);
+    background: linear-gradient(110deg, #e9a8a6 60%, #252152 60%);
+}
+
+.bg-footer {
+    background: -webkit-linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
+    background: -o-linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
+    background: -moz-linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
+    background: linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
+}
+
+/*Add hover on green buttons */
+.addMore {
+    border: 1px solid gray;
+    width: 150px;
+    height: 40px;
+    color:white;
+    background-color: forestgreen;
+    transition: all ease-in-out .1s;
+    cursor: pointer;
+}
+
+    .addMore:hover {
+        border: 1.5px solid white;
+        background-color: darkgray;
+    }
+
+/*Add hover on orange buttons */
+.addMoreOrange {
+    border: 1px solid gray;
+    width: 150px;
+    height: 40px;
+    color: white;
+    background-color: darkorange;
+    transition: all ease-in-out .1s;
+    cursor: pointer;
+}
+
+    .addMoreOrange:hover {
+        border: 1.5px solid white;
+        background-color: darkgray;
+    }
+
+/*Add hover on orange buttons */
+.addMoreRed {
+    border: 1px solid gray;
+    width: 150px;
+    height: 30px;
+    color: white;
+    background-color: orangered;
+    transition: all ease-in-out .1s;
+    cursor: pointer;
+}
+
+    .addMoreRed:hover {
+        border: 1.5px solid white;
+        background-color: darkred;
+    }
+
+/*Add hover on gray buttons */
+.addMoreGray {
+    border: 1px solid gray;
+    width: 150px;
+    height: 40px;
+    color: white;
+    background-color: gray;
+    transition: all ease-in-out .1s;
+    cursor: pointer;
+}
+
+    .addMoreGray:hover {
+        border: 1.5px solid white;
+        background-color: darkgray;
+    }
+
+/*Add hover on small images */
+.addMoreWhite {
+    border: 1px solid white;
+    width:  90px;
+    height: 90px;
+    color: white;
+    background-color: gray;
+    transition: all ease-in-out .2s;
+    cursor: pointer;
+}
+
+    .addMoreWhite:hover {
+        border: 3.5px solid white;
+        background-color: white;
+    }
+
+/*Loaction for the place holder in "New Post"*/
+.photoUpload {
+    float: right;
+    margin-top: -35%;
+    margin-right: 20%;
+    width: 100px;
+    height: 100px;
+}
+
+    /*Genraized loaction upload frame for "New Post" page*/
+    .locationUpload {
+        width:50%;
+        margin-top:-15%;
+    }
+
+/*Adjusting Location for image upload on "New Post" page*/
+.photoUpload1 {
+    float:right;
+    width:50%;
+    height:100px;
+    margin-top:5%
+}
+
+/*Loaction for preferred time in "New Post" page*/
+.preferredTime {
+    float:right;
+    margin-right:-90%;
+    margin-top:20%;
+}
+
+/*Loaction for Post confirmation text on "Post Confirmation page*/
+.postConfirmation {
+    width: 150px;
+    height:150px; 
+    float:right; 
+    margin-top:15%;
+    margin-right:50%;
+}
+
+/*Adjustment for home page button on "Post Confirmation" */
+.goHomePage {
+    float: left;
+    margin-left: 60%;
+    margin-top: 10%;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+    background-color: forestgreen;
+    top: 0px;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: outset;
+    cursor: pointer;
+    margin-bottom: 5px;
+    min-width: 135px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    left: 0px;
+    display: none;
+    position: absolute;
+    float: right;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    max-height: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    overflow: scroll
+}
+
+/* Links inside the dropdown */ 
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+        display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/* Changes inset box to have a scroll and a max hight */
+.list-group {
+    border: inset;
+    overflow: scroll;
+    overflow-x: hidden;
+    max-height: 200px;
+}
+
+.menu-banner {
+    background-color: #A8A8A8;
+    float: left
+}
+
+/*add hover on pageResult page images*/
+.addSmall {
+    border: 1px solid gray;
+    width: 40px;
+    height: 25px;
+    font-size: small;
+    color: black;
+    background-color: lightgray;
+    transition: all ease-in-out .1s;
+    cursor: pointer;
+}
+
+    .addSmall:hover {
+        border: 1.5px solid white;
+        background-color: darkgray;
+    }
+
+    .addSmall:focus {
+        border: 1.5px solid white;
+        color: white;
+        background-color: forestgreen;
+    }
+/*Decides the loaction of cancel button on New Post page*/
+.CancelLocation {
+    border: 1px solid gray;
+    width: 150px;
+    height: 40px;
+    color: white;
+    background-color: forestgreen;
+    transition: all ease-in-out .1s;
+    cursor: pointer;
+    float: right;
+    margin-right: -33%;
+    margin-top: 19.5%;
+}
+    /*Hover action for Cancel button*/
+    .CancelLocation:hover {
+        border: 1.5px solid white;
+        background-color: darkgray;
+    }
+
+    /*page margin*/
+.FormatPage{
+    width:100%;
+    margin:0 auto;
+    padding: 0;
+}
+
+/*left Column Margin*/
+.FormatLeftColumn {
+    float:left;
+    width:20%;
+}
+
+/*center Column Margin*/
+.FormatCenterColumn {
+    float: left;
+    width: 80% ;
+}
+
+/*hover over wishList ,star button, on search result page*/
+.button-star-SearchResult {
+    background-image: url('../img/star.png');
+    background-size: 100%;
+    float: right;
+    color: black;
+    height: 30px;
+    width: 30px;
+}
+
+    .button-star-SearchResult:focus {
+        background-image: url('../img/fill-star.png');
+        border: 1.5px solid white;
+        color: white;
+        background-color: khaki;
+    }
+
+    .button-star-SearchResult:hover {
+        background-image: url('../img/fill-star.png');
+        background-size: 100%;
+    }
+
+/*style the searchbar*/
+.searchInput {
+    border: 1px solid gray;
+    width: 150px;
+    height: 25px;
+    color: gray;
+    background-color: white;
+}
+
+/*style page format*/
+.format1 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/*style page ,left column, format*/
+.format2 {
+    float:left;
+    width:20%;
+}
+
+.MyList {
+     float:left;
+     width:80%;
+}
+
+.PostPage {
+    float:left;
+    margin-left:25%;
+    margin-top:10%;
+}
+
+.Thankyou {
+    float:right;
+    margin-right:20%;
+    margin-top:20%;
+}
+
+.centerPagePostConfirmation {
+    float:left;
+    width:80%;
+}
+
+.sharedElement {
+    background-color:white;
+    color:black;
+    width:150px; 
+    height:40px;
+}
+
+.signOnPostPage {
+    font-family: Lucida Grande;
+}
+
+.addMore2 {
+    border: 1px solid gray;
+    width: 150px;
+    height: 40px;
+    color: white;
+    background-color: forestgreen;
+    transition: all ease-in-out .1s;
+    cursor: pointer;
+    margin-top: 19%;
+}
+
+.addFunct {
+    width: -30px;
+}

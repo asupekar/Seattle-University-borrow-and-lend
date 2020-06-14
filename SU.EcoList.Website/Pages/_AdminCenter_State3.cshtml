@@ -1,0 +1,253 @@
+﻿@page
+@model AdminCenterModel
+@{
+    ViewData["Title"] = "_AdminCenter_State1";
+}
+
+@*Layout*@
+<div style="width:100%;margin:0 auto; padding: 0">
+
+    @*leftSide of page*@
+    <div style=" float:left;width:20%">
+
+        <img src="~/img/Eagle.PNG" />
+
+        <div class="boxed">
+            <small> don't need something!</small>
+        </div>
+
+        <br />
+
+        @*List an Item Button*@
+        <button class="addMoreOrange" onclick="window.location.href = '/NewPost';">List An Item</button>
+
+        <br>
+        <br>
+
+        @*Search Box Area*@
+        <div class="boxed">
+            <small> what do you need!</small>
+        </div>
+
+        <div class="searchBox">
+            <form action="/SearchResult">
+                <input class="searchInput" type="search" name="q" placeholder="Search">
+            </form>
+        </div>
+
+        <br>
+
+        @*Category Drop Menu*@
+        <select id="select a category">
+            <option value="select a category">Select a category</option>
+            <option value="Electronic">Electronic</option>
+            <option value="Furniture">furniture</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Lighting">lighting</option>
+        </select>
+
+        <br>
+        <br>
+
+        @*Navigation Buttons*@
+        <input class="addMore" type="button" value="My Account">
+        <br>
+        <br>
+        <input class="addMore" type="button" value="My WishList">
+        <br>
+        <br>
+        <input class="addMore" type="button" value="My Listing" onclick="window.location.href = '/MyListings';">
+        <br>
+        <br>
+        <input class="addMore" type="button" value="My Claimed items">
+
+    </div>
+
+    @*Center side of the Page*@
+    <div style="float: left;width: 38%">
+        <h1>Admin Center</h1>
+
+        <div style="float: left;margin-top: 0px; width: 98%">
+
+            @*Metrics Dataset Selector*@
+            <div class="select" style="float: left; margin-left: 10px; margin-right: 250px">
+                <select name="slct" id="slct" onchange="location = this.value;">
+                    <option>Listings</option>
+                    <option value="1">Claims</option>
+                    <option value="2">User Trends</option>
+                    <option value="3">Relisted Items</option>
+                    <option value="_AdminCenter_State4">Listed & Claimed</option>
+                </select>
+            </div>
+
+            @*Timeframe Filter*@
+            <div class="boxed-5px" style="margin-left: 10px; padding-top: 3px; float: left">
+                <img src="~/img/timeframe_clock.png" style="height: 27px; width: 27px" />
+            </div>
+
+            <div class="boxed-5px" style="padding-top: 5px; float: left; margin-right: 50px">
+                <input class="addSmall" type="button" value="1d">
+                <input class="addSmall" type="button" value="1w">
+                <input class="addSmall" type="button" value="1m">
+                <input class="addSmall" type="button" value="1qrt">
+                <input class="addSmall" type="button" value="1y" autofocus>
+                <input class="addSmall" type="button" value="3y">
+            </div>
+        </div>
+
+        <br />
+        <br />
+
+        @*JavaScript Insertion*@
+        <script src="~/lib/javascript/AdminCenter_State3_JavaScript.js"></script>
+
+        <br />
+        <br />
+
+        @*Link to Chart Render Script*@
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+        @*Line Graph Render*@
+        <div class="box" style="margin-right: 10px">
+            <div id="chartContainer1" style="width: 100%; height: 300px;display: inline-block;"></div>
+        </div>
+
+        @*Pie Chart Render*@
+        <div class="box" style="margin-right: 10px; height: 400px">
+            <div id="chartContainer2" style="width: 100%; height: 300px;display: inline-block;"></div>
+        </div>
+
+    </div>
+
+    @*Left of Line Graph Navigation Menu*@
+    <div style="float: left;margin-top: 55px; width: 20%">
+
+        <div class="box" style="height: 400px">
+
+            <h4 style="margin-bottom: 5px">🗃 Filters</h4>
+
+            @*Department Drop Down*@
+            <div class="menu-lable-small" style="color: black; float: left; margin-top: 10px; margin-left: 5px">Department</div>
+
+            <div class="select" style="width: 100px; float: left; margin-top: 7px; margin-left: 10px">
+                <select name="slct" id="slct">
+                    <option>All</option>
+                    <option value="1">AAH</option>
+                    <option value="2">ACCT</option>
+                    <option value="3">AEDT</option>
+                    <option value="4">ASSW</option>
+                    <option value="5">BIOL</option>
+                    <option value="6">CEEGR</option>
+                    <option value="7">CHEM</option>
+                    <option value="8">CLBR</option>
+                    <option value="9">CMJR</option>
+                    <option value="10">COUN</option>
+                    <option value="11">CRJS</option>
+                    <option value="12">CSSE</option>
+                    <option value="13">CSSP</option>
+                    <option value="14">CUIN</option>
+                    <option value="15">DCNC</option>
+                    <option value="16">DIUS</option>
+                    <option value="18">ECON</option>
+                    <option value="19">EDUC</option>
+                    <option value="20">ENES</option>
+                    <option value="21">ENGL</option>
+                    <option value="22">MATH</option>
+                    <option value="17">NURS</option>
+                    <option value="17">OLNC</option>
+                    <option value="17">PAAL</option>
+                </select>
+            </div>
+
+            @*Category Drop Down*@
+            <div class="menu-lable-small" style="color: black; float: left; margin-top: 15px; margin-left: 5px">Category</div>
+
+            <div class="select" style="width: 100px; float: left; margin-top: 14px; margin-left: 27px; font-size:x-small">
+                <select name="slct" id="slct">
+                    <option>All</option>
+                    <option value="1">Desk Toys</option>
+                    <option value="2">PC Accesories</option>
+                    <option value="3">Audio Equipment</option>
+                    <option value="4">Medical Training Suplies</option>
+                    <option value="5">Computers</option>
+                    <option value="6">Rugs and Carpeting</option>
+                    <option value="7">Classroom Supplies</option>
+                    <option value="8">Bags and File Carriers</option>
+                    <option value="10">Office Supplies</option>
+                    <option value="11">Architectural Supplies</option>
+                    <option value="12">Chairs and Seating</option>
+                    <option value="13">Party & Event Supplies</option>
+                    <option value="14">Mechanical Components</option>
+                    <option value="15">A/V Components</option>
+                </select>
+            </div>
+
+            <br />
+            <br />
+
+            @*Marker Section Header*@
+            <h4 style="margin-top: 40px;margin-bottom: 5px">🔍 Dept. Focus</h4>
+
+            <br />
+
+            @*Marker Selection Window*@
+            <div class="list-group" style="height: 200px">
+                <a href="#">AAH</a>
+                <a href="#">ACCT</a>
+                <a href="#">AEDT</a>
+                <a href="#">ASSW</a>
+                <a href="#">BIOL</a>
+                <a href="#">CEEGR</a>
+                <a href="#">CHEM</a>
+                <a href="#">CLBR</a>
+                <a href="#">CMJR</a>
+                <a href="#">COUN</a>
+                <a href="#">CRJS</a>
+                <a href="#">CSSE</a>
+                <a href="#">CSSP</a>
+                <a href="#">CUIN</a>
+                <a href="#">DCNC</a>
+                <a href="#">DIUS</a>
+                <a href="#">ECON</a>
+                <a href="#">EDUC</a>
+                <a href="#">ENES</a>
+                <a href="#">ENGL</a>
+                <a href="#">MATH</a>
+                <a href="#">NURS</a>
+                <a href="#">OLNC</a>
+                <a href="#">PAAL</a>
+            </div>
+        </div>
+
+        @*Bar Graph JavaScript Render*@
+        <div class="box" style="margin-right: 10px">
+            <div id="chartContainer3" style="width: 100%; height: 300px;display: inline-block;"></div>
+        </div>
+    </div>
+
+    @*Admin Center Right Hand Menu*@
+    <div style="float: left; width: 18%; margin-top: 55px; margin-left: 40px">
+        <div class="boxed">
+
+            @*Header Box*@
+            <div class="boxed">
+
+                <h4 style="margin-left: 9px;margin-bottom: 20px">Admin Tools</h4>
+
+            </div>
+
+            @*Admin Tool Buttons*@
+            <input class="addMoreOrange" type="button" onclick="window.location.href = '/ListingManager';" value="Listing Manager">
+            <br>
+            <br>
+            <input class="addMoreOrange" type="button" onclick="window.location.href = '/UserManager';" value="User Manager">
+            <br>
+            <br>
+            <input class="addMoreOrange" type="button" value="Category Manager">
+            <br>
+            <br>
+            <input class="addMoreOrange" type="button" value="Email All Users">
+        </div>
+    </div>
+</div>
+

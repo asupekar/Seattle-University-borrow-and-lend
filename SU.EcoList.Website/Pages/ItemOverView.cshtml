@@ -1,0 +1,146 @@
+﻿@page
+@model SU.EcoList.Website.ItemOverViewModel
+@{
+    ViewData["Title"] = "ItemOverView";
+}
+
+
+@*Layout*@
+<div class="format1">
+
+    @*leftSide of page*@
+    <div class="format2">
+
+        <img src="~/img/Eagle.PNG" />
+
+        <div class="boxed">
+
+            <small> don't need something!</small>
+
+        </div>
+
+        <br>
+        @*List An Item button*@
+        <button class="addMoreOrange" onclick="window.location.href = '/NewPost';">List An Item</button>
+
+        <br>
+        <br>
+
+        <div class="boxed">
+
+            <small> what do you need!</small>
+
+        </div>
+        @*Search bar*@ 
+        <div class="searchBox">
+
+            <form action="/SearchResult">
+
+                <input class="searchInput" type="search" name="q" placeholder="Search">
+
+            </form>
+
+        </div>
+
+        <br>
+        @*select catagory button*@
+        <select id="select a category">
+
+            <option value="select a category">Select a category</option>
+            <option value="Electronic">Electronic</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Lighting">Lighting</option>
+
+        </select>
+
+        <br>
+        <br>
+        @*My Account button*@
+        <input class="addMore" type="button" value="My Account">
+
+        <br>
+        <br>
+        @*My WishList button*@
+        <input class="addMore" type="button" value="My WishList">
+
+        <br>
+        <br>
+        @*My Listing button*@
+        <input class="addMore" type="button" value="My Listing" onclick="window.location.href = '/MyListings';">
+
+        <br>
+        <br>
+        @*My Claim item button*@
+        <input class="addMore" type="button" value="My Claimed item">
+
+    </div>
+
+
+</div>
+
+@*Center side of the Page*@
+    <div class="boxed">
+       @*claimed item title*@
+        <h1><strong>Modern Art Paperweight</strong></h1>
+
+        <br>
+        <br>
+
+    </div>
+
+    <div class="card-columns">
+        @*claimed item image*@
+        <img src="~/img/PaperWeight1.png"
+             alt="paperWeight"
+             title="Modern PaperWeight">
+        @*cliamed item discription*@
+        <div class="text-block">
+
+            <p>
+                <h7>
+
+                    <br>
+                    <br>
+                    <br>
+
+                    ArtsOnDesk Modern Art Paperweight - St206
+                    Holder Seattle University
+                    Stainless Steel Satin Finish Luxury Desktop
+                    Luxury Desktop Stainless Steel Satin Finish Luxury
+                    Accessory Organizer Holder Seattle University.
+
+                    <br>
+                    <br>
+
+                </h7>
+                @*claim item button*@
+                <button class="addMore" onclick="window.location.href ='/ClaimConfirmation';">Claim item</button>
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <dive>
+
+        <br>
+        <br>
+        <br>
+        @*Three images forrelated items to the claimed item shown at the button left of the page*@
+        <small><b>Related items:</b></small>
+
+        <br>
+
+        <a href="/SearchResult">
+
+            <img align="left" class="addMoreWhite" src="~/img/PaperWeight2.png">
+            <img align="left" class="addMoreWhite" src="~/img/PaperWeight3.png">
+            <img align="left" class="addMoreWhite" src="~/img/PaperWeight5.png">
+
+        </a>
+
+    </dive>
+
+

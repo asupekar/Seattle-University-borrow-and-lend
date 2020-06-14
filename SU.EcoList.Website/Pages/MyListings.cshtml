@@ -1,0 +1,111 @@
+﻿@page
+@model SU.EcoList.Website.Pages.MyListingsModel
+@{
+    ViewData["Title"] = "MyListings";
+}
+
+
+@*leftSide of page*@
+
+<div class="format1" />
+
+<div class="format2">
+
+    <img src="~/img/Eagle.PNG" />
+
+    <br>
+
+    <button class="addMoreOrange" onclick="window.location.href = '/NewPost';">List An Item</button>
+
+    <br>
+
+    <br>
+
+    <div class="boxed">
+
+        <small> don't need something!</small>
+
+    </div>
+
+    <br>
+
+    <div class="boxed">
+
+        <small> what do you need!</small>
+
+    </div>
+
+    <select id="select a category">
+
+        <option value="select a category">Select a category</option>
+        <option value="Electronic">Electronic</option>
+        <option value="Furniture">Furniture</option>
+        <option value="Accessories">Accessories</option>
+        <option value="Lighting">Lighting</option>
+
+    </select>
+
+    <br>
+    <br>
+
+    <input class="addMore" type="button" value="My Account">
+
+    <br>
+    <br>
+
+    <input class="addMore" type="button" value="My WishList">
+
+    <br>
+    <br>
+
+    <input class="addMore" type="button" value="My Claimed items">
+
+</div>
+
+
+@*Center side of the Page*@
+
+<div class="MyList">
+
+    <div class="boxed">
+
+        <h1><strong>My Listing</strong></h1>
+
+    </div>
+    
+    <div class="card-columns">
+
+        @foreach (var image in @NewPostModel.GetImages())
+
+        {
+
+            <div class="card">
+
+                <div class="card-img" style="background-image: url('img/MyListings/@image.Url');"></div>
+
+                <div class="card-body">
+
+                    <a class="card-title" style="background-color:white;color:green" asp-area="" asp-page="/ItemOverView"><small>@image.Title</small></a>
+
+                    <a class="card-title" style="background-color:white;color:green" asp-area="" asp-page="/ItemOverView"><small>@image.Description</small></a>
+
+                </div>
+
+            </div>
+
+        }
+
+    </div>
+
+</div>
+
+
+@*Center side of the Page*@
+
+<div class="goHomePage">
+
+    <br />
+
+    <button class="addMore" onclick="window.location.href = '/index';">Go to Home</button>
+
+</div>

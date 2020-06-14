@@ -1,0 +1,281 @@
+﻿@page
+@model SU.EcoList.Website.Pages.ListingManagerModel
+@{
+    ViewData["Title"] = "Listing Manager";
+}
+
+@*Layout*@
+<div style="width:100%;margin:0 auto; padding: 0">
+
+    @*leftSide of page*@
+    <div style=" float:left;width:20%">
+
+        <img src="~/img/Eagle.PNG" />
+
+        @*List an Item Button*@
+        <div class="boxed">
+            <small> don't need something!</small>
+        </div>
+
+        <br>
+
+        <button class="addMoreOrange" onclick="window.location.href = '/NewPost';">List An Item</button>
+
+        <br>
+        <br>
+
+        @*Search Box Area*@
+        <div class="boxed">
+            <small> what do you need!</small>
+        </div>
+
+        <div class="searchBox">
+            <form action="/SearchResult">
+                <input class="searchInput" type="search" name="q" placeholder="Search">
+            </form>
+        </div>
+
+        <br>
+
+        @*Category Drop Menu*@
+        <select id="select a category">
+            <option value="select a category">Select a category</option>
+            <option value="Electronic">Electronic</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Lighting">Fighting</option>
+        </select>
+
+        <br>
+        <br>
+
+        @*Navigation Buttons*@
+        <input type="button" style="background-color:forestgreen;color:white;width:150px;
+        height:40px;" value="My Account">
+
+        <br>
+        <br>
+
+        <input type="button" style="background-color:forestgreen;color:white;width:150px;
+        height:40px;" value="My WishList">
+
+        <br>
+        <br>
+
+        <input type="button" style="background-color:forestgreen;color:white;width:150px;
+        height:40px;" value="My Listing" onclick="window.location.href = '/MyListings';">
+
+        <br>
+        <br>
+
+        <input type="button" style="background-color:forestgreen;color:white;width:150px;
+        height:40px;" value="My Claimed items">
+
+    </div>
+
+    @*Center of page*@
+    <div style="float: left;width: 75.5%">
+
+        <h1 style="padding-bottom: 10px">Listing Manager</h1>
+
+        @*Menu Banner (Large Left Side)*@
+        <div class="menu-banner" style="height: 190px; width: 560px">
+
+            <div class="boxed-5px" style="padding-top: 5px">
+                <div class="menu-lable">Filter Listings</div>
+            </div>
+
+            @*Timeframe filter*@
+            <div class="boxed-5px" style="margin-left: 60px; padding-top: 3px">
+                <img src="~/img/timeframe_clock.png" style="height: 27px; width: 27px" />
+            </div>
+
+            <div class="boxed-5px" style="padding-top: 5px">
+                <input class="addSmall" type="button" value="1d">
+                <input class="addSmall" type="button" value="1w">
+                <input class="addSmall" type="button" value="1m">
+                <input class="addSmall" type="button" value="1qrt" onclick="window.location.href = '/_ListingManager_State1';">
+                <input class="addSmall" type="button" value="1y">
+                <input class="addSmall" type="button" value="3y">
+            </div>
+
+            <br />
+            <br />
+
+            @*Department Filter & Status Filter Dropdown menu*@ 
+            <div class="boxed-5px" style="width: 450px; height: 35px">
+
+                @*Department Filter Dropdown*@
+                <div class="menu-lable-small" style="float: left; margin-top: 5px; margin-left: 5px">Department</div>
+
+                <div class="select" style="width: 100px; float: left; margin-left: 10px">
+                    <select name="slct" id="slct">
+                        <option>All</option>
+                        <option value="1">AAH</option>
+                        <option value="2">ACCT</option>
+                        <option value="3">AEDT</option>
+                        <option value="4">ASSW</option>
+                        <option value="5">BIOL</option>
+                        <option value="6">CEEGR</option>
+                        <option value="7">CHEM</option>
+                        <option value="8">CLBR</option>
+                        <option value="9">CMJR</option>
+                        <option value="10">COUN</option>
+                        <option value="11">CRJS</option>
+                        <option value="12">CSSE</option>
+                        <option value="13">CSSP</option>
+                        <option value="14">CUIN</option>
+                        <option value="15">DCNC</option>
+                        <option value="16">DIUS</option>
+                        <option value="18">ECON</option>
+                        <option value="19">EDUC</option>
+                        <option value="20">ENES</option>
+                        <option value="21">ENGL</option>
+                        <option value="22">MATH</option>
+                        <option value="17">NURS</option>
+                        <option value="17">OLNC</option>
+                        <option value="17">PAAL</option>
+
+                    </select>
+                </div>
+
+                @*Status Filter Dropdown*@
+                <div class="menu-lable-small" style="float: left; margin-top: 5px">Status</div>
+
+                <div class="select" style="width: 100px; float: left; margin-left: 10px">
+                    <select name="slct" id="slct" onchange="location = this.value;">
+                        <option>All</option>
+                        <option value="1">Active</option>
+                        <option value="2">Inactive</option>
+                        <option value="3">Claimed</option>
+                    </select>
+                </div>
+
+            </div>
+
+            @*Category Filter Dropdown*@
+            <div class="boxed-5px" style="width: 550px; height: 35px; ">
+
+                <div class="menu-lable-small" style="float: left; margin-top: 5px; margin-left: 5px">Category</div>
+
+                <div class="select" style="width: 100px; float: left; margin-left: 26px">
+                    <select name="slct" id="slct">
+                        <option>All</option>
+                        <option value="1">Desk Toys</option>
+                        <option value="2">PC Accesories</option>
+                        <option value="3">Audio Equipment</option>
+                        <option value="4">Medical Training Suplies</option>
+                        <option value="5">Computers</option>
+                        <option value="6">Rugs and Carpeting</option>
+                        <option value="7">Classroom Supplies</option>
+                        <option value="8">Bags and File Carriers</option>
+                        <option value="10">Office Supplies</option>
+                        <option value="11">Architectural Supplies</option>
+                        <option value="12">Chairs and Seating</option>
+                        <option value="13">Party & Event Supplies</option>
+                        <option value="14">Mechanical Components</option>
+                        <option value="15">A/V Components</option>
+
+                    </select>
+                </div>
+            </div>
+
+            @*Email All Listers Button*@
+            <div class="boxed-5px" style="width: 550px; height: 40px">
+
+                <input class="addMore" type="button" value="Email" style="float: right; height: 30px; margin-right: 10px">
+
+                <div class="menu-lable-small" style="float: right; margin-top: 5px; margin-right: 20px">All Listings</div>
+
+                <br />
+                <br />
+
+            </div>
+        </div>
+
+        @*Menu Banner (Small Rihgt Side)*@
+        <div class="menu-banner" style="height: 190px; width: 265px; float: right">
+
+            @*Data Options Dropdown Menu*@
+            <div class="boxed-5px">
+                <div class="menu-lable">Data Options</div>
+            </div>
+
+            <div class="boxed-5px" style="width: 250px; height: 35px ">
+
+                <div class="menu-lable-small" style="float: left; margin-top: 5px; margin-left: 5px">Results</div>
+
+                <div class="select" style="width: 100px; float: left; margin-left: 10px">
+
+                    <select name="slct" id="slct">
+
+                        <option>100+ results per page</option>
+                        <option value="1">50 results per page</option>
+                        <option value="2">25 results per page</option>
+                        <option value="3">10 results per page</option>
+
+                    </select>
+                </div>
+            </div>
+
+            @*Data Export Buttons*@
+            <div class="boxed-5px" style="width: 250px; height: 35px; margin-top: 63px">
+
+                <div class="menu-lable-small" style="float: left; margin-top: 5px; margin-left: 5px">Export</div>
+
+                <input class="addMoreOrange" type="button" value="CSV" style="float: right; height: 30px; width: 50px" />
+
+                <input class="addMore" type="button" value="XLSX" style="float: right; height: 30px; width: 50px; margin-right: 10px">
+
+            </div>
+
+        </div>
+
+        <br />
+        <br />
+
+        @*Listing Cards Area*@
+        <div class="box" style="width: 836px; height: 100%; margin-top: 150px;">
+
+            <div class="card-columns" style="column-count: 1">
+
+                @foreach (var product in Model.Products)
+                {
+                    <a href="/ItemOverView">
+                        <div class="card" style="width: 52rem" ;>
+                            <div class="card-body" style="background-color: white; width: 100%; height: 250px">
+                                <div class="card-img" style="background-image: url('@product.Image'); width: 20%; height: 90% ; float: left;">
+                                    <div class="boxed" style="width: 50rem; height: 13rem">
+                                        <div class="boxed" style="width: 24rem; height: 13rem; float: left">
+                                            <a class="card-title" style="min-width: 300px;margin-left: 200px; float: left; background-color:white;color:black" asp-area="" asp-page="/ItemOverView"><medium>@product.Title</medium></a>
+                                            <a class="card-title" style="max-width: 300px;margin-left: 200px; float: left; background-color:white;color:black" asp-area="" asp-page="/ItemOverView"><small>@product.Description</small></a>
+                                        </div>
+                                        <div class="boxed" style="width: 20rem; height: 13rem; float: right">
+                                            <div class="boxed" style="max-width: 150px; margin-left: 0px; float: right; background-color: white; color: black; margin-top: 0px; margin-right: 10px">
+                                                <a class="card-title" style="max-width: 300px;margin-left: 0px; float: right; background-color:white;color:black; margin-top: 0px; margin-right: 10px" asp-area="" asp-page="/ItemOverView"><small>Lister: </small><small>@product.Lister</small></a>
+                                                <a class="card-title" style="max-width: 300px;margin-left: 0px; float: right; background-color:white;color:black; margin-top: 0px; margin-right: 10px" asp-area="" asp-page="/ItemOverView"><small>Status: </small><small>@product.Status</small></a>
+                                                <a class="card-title" style="max-width: 300px;margin-left: 0px; float: right; background-color:white;color:black; margin-top: 0px; margin-right: 10px" asp-area="" asp-page="/ItemOverView"><small>Date Listed: </small><small>@product.DateListed</small></a>
+                                            </div>
+                                            <input class="addMore" type="button" value="Email" style="float: right; height: 30px; margin-right: 10px; margin-top: 20px; margin-left: 200px">
+                                            <input class="addMoreOrange" type="button" value="Remove" style="float: right; height: 30px; margin-right: 10px; margin-left: 0px; margin-top: 10px" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                }
+
+            </div>
+
+            @*Spacer Before footer (Transparent footer)*@
+            <div class="box" style="width: 836px; height: 100px">
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="clear:both"></div>
+
